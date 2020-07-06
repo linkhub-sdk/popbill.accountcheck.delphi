@@ -18,7 +18,7 @@ type
                 bankCode : string;
                 accountNumber : string;
                 accountName : string;
-                checkDate : string;
+                checkDate : Double;
                 resultCode : string;
                 resultMessage : string;
         end;
@@ -162,7 +162,7 @@ begin
 
         if Length(getJsonString(json, 'checkDate')) > 0 then
         begin
-              result.checkDate := getJsonString(json, 'checkDate');
+              result.checkDate := getJSonFloat(json, 'checkDate');
         end;        
 end;
 
